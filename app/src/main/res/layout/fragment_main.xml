@@ -9,9 +9,47 @@
                 tools:context="com.coderming.myplants.MainActivityFragment"
                 tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/sortpanel"
+        android:layout_height="wrap_content" >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/sort_by"
+            android:gravity="center_vertical"/>
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_name"
+                android:id="@+id/radioButton"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scientific_name"
+                android:id="@+id/radioButton2"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sortpanel"
+        android:numColumns="3"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:focusable="true"
+        android:stretchMode="columnWidth"
+        android:clickable="true"     >
+    </GridView>
 </RelativeLayout>
