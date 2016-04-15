@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_gravity="bottom"
+        android:gravity="center"
         android:text="New Text"
-        android:background="#a78cf9"/>
+        android:background="#d5caf7"/>
 
 </FrameLayout>

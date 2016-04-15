@@ -1,12 +1,14 @@
 package com.coderming.myplants;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -46,6 +48,15 @@ public class MainActivityFragment extends Fragment {
         mAdapter = new GridViewAdapter(context, R.layout.grid_item, mPlantList);
         mGridView = (GridView) root.findViewById(R.id.gridView1);
         mGridView.setAdapter(mAdapter);
+        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                PlantItem item = mAdapter.getItem(position);
+                Intent detailIntent = new Intent(getContext(), DetailActivity.class);
+                detailIntent.putExtra("PlantItem", item);
+                startActivity(detailIntent);
+            }
+        });
         return root;
     }
 }

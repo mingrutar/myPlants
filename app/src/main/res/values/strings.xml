@@ -5,5 +5,7 @@
     <string name="sort_by">Sort by:</string>
     <string name="common_name">Common Name</string>
     <string name="scientific_name">Scientific Namen</string>
+    <string name="app_title">My Native Plants</string>
+    <string name="title_activity_detail">DetailActivityActivity</string>
 
 </resources>

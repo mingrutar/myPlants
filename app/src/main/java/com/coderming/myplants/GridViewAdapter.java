@@ -2,9 +2,10 @@ package com.coderming.myplants;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,25 +32,26 @@ public class GridViewAdapter extends ArrayAdapter {
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         for (PlantItem item : list) {
-            item.mDrawable = getDrawableImage(item.getImageFilename());
+            if (item.mDrawable == null ) {
+                item.mDrawable = getDrawableImage(item.getImageFilename(), 300);
+            }
         }
         super.addAll(list);
     }
 
-    private Drawable getDrawableImage(String imageFilename) {
+    private Bitmap getDrawableImage(String imageFilename, int imageSize) {
         InputStream is =  null;
         try {
             is = context.getAssets().open(imageFilename);
-            return Drawable.createFromStream(is, null);
+            Bitmap  thumbnail = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeStream(is), imageSize, imageSize);
+            return thumbnail;
         } catch (IOException ex) {
             if (is != null) {
                 try { is.close();} catch (Exception e) { }
             }
-            Log.w(LOG_TAG, "default image error", ex);
         }
         return null;
     }
-
 
     @Override
     public PlantItem getItem(int position) {
@@ -73,7 +75,7 @@ public class GridViewAdapter extends ArrayAdapter {
         }
 
         PlantItem item = this.getItem(position);
-        holder.mImageView.setImageDrawable(item.mDrawable);
+        holder.mImageView.setImageBitmap(item.mDrawable);
         holder.mTextView.setText(item.getTitle());
         return row;
     }
