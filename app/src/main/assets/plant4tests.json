@@ -1,0 +1,108 @@
+{
+  "plants": [
+     {
+      "ommon": "Pacific trillium",
+      "scientific" : "ovatum",
+      "genus": "Trillium",
+      "family" : "Melanthiaceae",
+      "description" : "Flower size is 1.2 to 2.4 inches Leaf: Whorled Plant Observed beginning of March thru 3rd week of August",
+      "photo": "trillium.jpg"
+    },
+    {
+      "ommon": "arctic sweet coltsfoot ",
+      "scientific" : "frigidus",
+      "genus": "Petasites",
+      "family" : "Asteraceae",
+      "description" : "Perennial from a creeping rhizome, 1-5 dm. tall, sub-dioecious, the flowers appearing before or with the leaves.",
+      "photo": "sweetColtfoot.jpg"
+    },
+    {
+      "ommon": "common dandelion",
+      "scientific" : "officinale ",
+      "genus": "Taraxacum",
+      "family" : "Asteraceae",
+      "description" : "Scape hollow, with a few soft hairs upward, terminating in a large, solitary head; involucre 1.5-2.5 cm. high, the bracts in two series, the outer shorter, the inner 13-21, these at first erect, becoming reflexed; corollas all ligulate, bright yellow; the mature achenes and the white pappus form a ball.",
+      "photo": "dandelion.jpg"
+    },
+    {
+      "ommon": "pearl yarrow",
+      "scientific" : "ptarmica ",
+      "genus": "Achillea",
+      "family" : "Asteraceae",
+      "description" : "Inflorescence open, of several small umbels terminating the branches; involucral bracts imbricate in several series, dry, the margins translucent; rays short, white; disc flowers creamy-white; receptacle convex, chaffy throughout; pappus none.",
+      "photo": "yarrow.jpg"
+    },
+    {
+      "ommon": "orange agoseris",
+      "scientific" : "aurantiaca",
+      "genus": "Agoseris",
+      "family" : "Asteraceae",
+      "description" : "Scapose, usually glabrous perennial, 1-6 dm. tall, with milky juice.",
+      "photo": "orangeDandelion.jpg"
+    },
+    {
+      "ommon": "woolly pussytoes",
+      "scientific" : "lanata",
+      "genus": "Antennaria",
+      "family" : "Asteraceae",
+      "description" : "Perennial from a short woody base, not rhizomatous, 1-2 dm. tall, densely and persistently white-woolly throughout.Leaves: Basal leaves erect, tufted and persistant, 3-10 cm. long and 3-10 mm. wide, usually with 3 main veins; cauline leaves linear, progressively reduced upward.      Flowers: Heads several in a compact inflorescence; pistillate involucres 5-8 mm. high, white-woolly toward the usually greenish base, the scarious portion dark brown or greenish-black below, paler toward the whitish tip; staminate involucres similar but smaller.Fruits: Achene terete.",
+      "photo": "woolyPussyToes.jpg"
+    },
+    {
+      "ommon": "pointedtip mariposa lily",
+      "scientific" : "apiculatus",
+      "genus": "Calochortus",
+      "family" : "Liliaceae",
+      "description" : "Occurring in the northeast corner of Washington; southern British Columbia south to Washington, east to Alberta, Idaho, and Montana.",
+      "photo": "pointedtipMariposaLily.jpg"
+    },
+    {
+      "ommon": "yellow avalanche-lily",
+      "scientific" : "grandiflorum",
+      "genus": "Erythronium",
+      "family" : "Liliaceae",
+      "description" : "Herbaceous, scapose perennial from a deep-seated corm, the scape 1-2 dm. tall.",
+      "photo": "paleYellowIris.jpg"
+    },
+    {
+      "ommon": "Hooker fairy-bell",
+      "scientific" : "Prosartes hookeri",
+      "genus": "Prosartes",
+      "family" : "Liliaceae",
+      "description" : "Sparingly branched perennial herbs from rhizomes, the leafy stem up to 6 dm. tall.",
+      "photo": "hookerFair-bell.jpg"
+    },
+    {
+      "ommon": "Columbian lily",
+      "scientific" : "columbianum Hort",
+      "genus": "Lilium",
+      "family" : "Liliaceae",
+      "description" : "Prairies, woods and coniferous forests, sea level to mid-elevations in drier areas.",
+      "photo": "tigerLily.jpg"
+    },
+    {
+      "ommon": "pale yellow iris ",
+      "scientific" : "pseudacorus",
+      "genus": "Iris",
+      "family" : "Iridaceae",
+      "description" : "Inflorescence branched, few to several flowered, 1.5-5 dm. long; flowers pale to deep yellow, purple-lined; pedicles up to 5 cm. long; perianth parts fused in a tube at the base, the tube about about 12 mm. long; sepals 3, obovate, spreading, about 5 cm. long; petals 3, much shorter and narrower than the sepals, upright; stamens 3, opposite the sepals; style branches 3, about 22 mm. long, with 2 terminal lobes less than as long; stigma triangular; ovary inferior.",
+      "photo": "paleYellowIris.jpg"
+    },
+    {
+      "ommon": "harsh Indian paintbrush",
+      "scientific" : "hispida",
+      "genus": "Castilleja",
+      "family" : "Orobanchaceae",
+      "description" : "Leaf: Alternate Plant Observed beginning of April thru 3rd week of August",
+      "photo": "indianBrush"
+    },
+    {
+      "ommon": "purple deadnettle",
+      "scientific" : "purpureum ",
+      "genus": "Lamium",
+      "family" : "Lamiaceae",
+      "description" : "Flower size is .4 to .8 inches Leaf: Opposite Plant Observed 3rd week of January thru end of June",
+      "photo": "putpleDeadnettle.jpg"
+    }
+  ]
+}

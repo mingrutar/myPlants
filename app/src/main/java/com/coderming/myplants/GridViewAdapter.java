@@ -26,11 +26,13 @@ public class GridViewAdapter extends ArrayAdapter {
 //    List<PlantItem> data;
     private Context context;
     private int layoutResourceId;
+    private boolean mDisplayby;
 
-    public GridViewAdapter(Context context, int layoutResourceId, List<PlantItem> list ) {
+    public GridViewAdapter(Context context, int layoutResourceId, boolean displayBy, List<PlantItem> list ) {
         super(context,  layoutResourceId);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
+        mDisplayby = displayBy;
         for (PlantItem item : list) {
             if (item.mDrawable == null ) {
                 item.mDrawable = getDrawableImage(item.getImageFilename(), 300);
@@ -76,10 +78,18 @@ public class GridViewAdapter extends ArrayAdapter {
 
         PlantItem item = this.getItem(position);
         holder.mImageView.setImageBitmap(item.mDrawable);
-        holder.mTextView.setText(item.getTitle());
+        if (mDisplayby)
+            holder.mTextView.setText(item.mCommonName);
+        else
+            holder.mTextView.setText(item.mScientificName);
+
         return row;
     }
-
+    public void resetList(List<PlantItem> list, boolean displayBy) {
+        this.mDisplayby = displayBy;
+        this.clear();
+        this.addAll(list);
+    }
     class CustomerViewHolder extends RecyclerView.ViewHolder {
         ImageView mImageView;
         TextView mTextView;

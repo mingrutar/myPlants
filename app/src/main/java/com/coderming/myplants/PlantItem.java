@@ -13,6 +13,9 @@ public class PlantItem implements Serializable {
     public String mCommonName;
     public String mScientificName;
     public String mImageFilename;
+    public String mFamily;
+    public String mGenus;
+
     public String mDesciption;
 
     transient Bitmap mDrawable;
@@ -25,27 +28,11 @@ public class PlantItem implements Serializable {
         mDesciption = desciption;
         this.id = id;
     }
-
-    public String getTitle() {
-        //TODO:  check preference
-        return mCommonName;
-    }
-    public String getCommonName() {
-        return mCommonName;
-    }
-    public long getId() {
-        return id;
-    }
-
-    public String getDesciption() {
-        return mDesciption;
-    }
-
     public String getImageFilename() {
         return mImageFilename;
     }
-
-    public String getScientificName() {
-        return mScientificName;
+    @Override
+    public String toString() {
+        return String.format("common=%s, scientific=%s, imgFile=%s", mCommonName, mScientificName, mImageFilename);
     }
 }

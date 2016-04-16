@@ -54,11 +54,15 @@ public class DetailActivityActivityFragment extends Fragment {
             ImageView imageView = (ImageView) root.findViewById(R.id.imageView);
             imageView.setImageBitmap(plant.mDrawable);
             EditText text = (EditText) root.findViewById(R.id.commanNameText);
-            setText(text, plant.getCommonName());
+            setText(text, plant.mCommonName);
             text = (EditText) root.findViewById(R.id.scientificNameText);
-            setText(text, plant.getScientificName());
+            setText(text, plant.mScientificName);
             text = (EditText) root.findViewById(R.id.descriptionText);
-            setText(text, plant.getDesciption());
+            setText(text, plant.mDesciption);
+            text = (EditText) root.findViewById(R.id.genusText);
+            setText(text, plant.mGenus);
+            text = (EditText) root.findViewById(R.id.familyText);
+            setText(text, plant.mFamily);
         }
         return root;
     }
