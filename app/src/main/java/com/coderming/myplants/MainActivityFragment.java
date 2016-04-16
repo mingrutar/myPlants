@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,23 +76,24 @@ public class MainActivityFragment extends Fragment {
         }
         return ret;
     }
-    void makeTestList() {
-        long total = 4;
-        for (long i = 1; i <= total; i++) {
-            PlantItem pi = new PlantItem(i, String.format("flower_%d.jpg", i),
-                    String.format("flower_%d", i), String.format("%dscientic %d", (8-i), i),
-                    String.format("Description of flower %d", i));
-            mPlantList.add(pi);
-        }
-    }
     public MainActivityFragment() {
         mPlantList = new ArrayList<>();
 /*        String[][] imageData = new String[][] {{imagePath+"20150813SnowGrassFlat509.jpg", "flower1", "scientic 1", "description 1"}
                 ,{imagePath+"20150813SnowGrassFlat510.jpg", "flower2", "scientic 2", "description 2"} }; */
-        Log.v(LOG_TAG, "MainActivityFragment() ");
-        makeTestList();
     }
+    private int calcNumColumn() {
+        DisplayMetrics metrics = new  DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
+        float yInches= metrics.heightPixels/metrics.ydpi;
+        float xInches= metrics.widthPixels/metrics.xdpi;
+        double diagonalInches = Math.sqrt(xInches*xInches + yInches*yInches);
+        if (diagonalInches>=6.5){
+            return 3;
+        }else{
+            return 2;
+        }
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -106,6 +108,8 @@ public class MainActivityFragment extends Fragment {
 //        mAdapter = new MyRecyclerAdapter(context);
         mAdapter = new GridViewAdapter(context, R.layout.grid_item, displayBy, mPlantList);
         mGridView = (GridView) root.findViewById(R.id.gridView1);
+        mGridView.setNumColumns(calcNumColumn());
+
         mGridView.setAdapter(mAdapter);
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
