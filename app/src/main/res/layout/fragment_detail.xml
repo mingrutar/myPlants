@@ -78,6 +78,46 @@
                         android:textStyle="italic"
                         android:id="@+id/scientificNameText"/>
                 </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="right"
+                        android:padding="3dip"
+                        android:text="Genus Name:"
+                        android:textStyle="bold"
+                        android:id="@+id/genusTextView"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:padding="3dip"
+                        android:editable="false"
+                        android:textStyle="italic"
+                        android:id="@+id/genusText"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="right"
+                        android:padding="3dip"
+                        android:text="Family Name:"
+                        android:textStyle="bold"
+                        android:id="@+id/familyTextView"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:padding="3dip"
+                        android:editable="false"
+                        android:textStyle="italic"
+                        android:id="@+id/familyText"/>
+                </TableRow>
             </TableLayout>
             <TextView
                 android:layout_width="wrap_content"

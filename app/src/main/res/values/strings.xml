@@ -2,7 +2,7 @@
     <string name="app_name">My Plants</string>
     <string name="action_settings">Settings</string>
 
-    <string name="sort_by">Sort by:</string>
+    <string name="sort_by">Display by:</string>
     <string name="common_name">Common Name</string>
     <string name="scientific_name">Scientific Namen</string>
     <string name="app_title">My Native Plants</string>

@@ -37,7 +37,7 @@ public class MainActivityFragment extends Fragment {
     static final String  genus_tag = "genus";
     static final String  family_tag = "family";
     static final String  description_tag = "description";
-//    static final String  photo_tag = "photo";
+    static final String  photo_tag = "photo";
 
     String imagePath = "/mnt/sdcard/Photos/";           // Environment.getExternalStorageDirectory()+ "/Photos/";
 
@@ -66,7 +66,7 @@ public class MainActivityFragment extends Fragment {
                 plant.mGenus = jo_inside.getString(genus_tag);
                 plant.mFamily = jo_inside.getString(family_tag);
                 plant.mDesciption = jo_inside.getString(description_tag);
-                plant.mImageFilename = String.format("flower_%d.jpg", (i % 4) + 1);
+                plant.mImageFilename = jo_inside.getString(photo_tag);
                 Log.v(LOG_TAG, plant.toString());
                 ret.add(plant);
             }

@@ -22,6 +22,7 @@
             android:text="@string/sort_by"
             android:gravity="center_vertical"/>
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/radioGroup_display_by"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -30,13 +31,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/common_name"
                 android:checked="true"
-                android:id="@+id/radioButton"/>
+                android:id="@+id/radioButton_common"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/scientific_name"
-                android:id="@+id/radioButton2"/>
+                android:id="@+id/radioButton_scientific"/>
         </RadioGroup>
     </LinearLayout>
 
