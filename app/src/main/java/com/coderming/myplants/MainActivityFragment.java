@@ -143,4 +143,32 @@ public class MainActivityFragment extends Fragment {
         });
         return root;
     }
+
+//    // TODO: did not get it
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == MainActivity.CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
+//            if (resultCode == Activity.RESULT_OK) {
+//                if (data != null) {
+//                    Log.i(LOG_TAG, "Image saved to:" + data.getData());
+//                } else {
+//                    Activity activity = getActivity();
+//                    if (activity instanceof  MainActivity) {
+//                        String path = ((MainActivity) activity).getSavedImagePath(requestCode);
+//                        if (path != null ) {
+//                            Log.v(LOG_TAG, "image file found at "+path);
+//                            //TODO: open dialog and create plantItem
+//                        }
+//                    }
+//                }
+//            } else if (resultCode == Activity.RESULT_CANCELED) {
+//                Log.i(LOG_TAG, "User canceled image capturing");
+//                // User cancelled the image capture
+//            } else {
+//                Log.i(LOG_TAG, String.format("Got error code in launching camera: %d", requestCode));
+//                // Image capture failed, advise user
+//            }
+//        }
+//    }
+
 }

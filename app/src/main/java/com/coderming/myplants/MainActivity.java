@@ -20,7 +20,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
+    public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
 
     private Uri fileUri;
 
@@ -47,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
         File mediaFile = new File(mediaStorageDir.getPath() + File.separator +
                     "IMG_"+ timeStamp + ".jpg");
         return mediaFile;
+    }
+    public String getSavedImagePath(int requestCode) {
+        if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
+            File file = new File(fileUri.getPath());
+            if (file.exists()) {
+                return file.getPath();
+            } else {
+                Log.w(LOG_TAG, "image not saved to:" + file.getName());
+            }
+        }
+        return null;
     }
 
     @Override
