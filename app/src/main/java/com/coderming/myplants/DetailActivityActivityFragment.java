@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +22,7 @@ public class DetailActivityActivityFragment extends Fragment {
     public DetailActivityActivityFragment() {
     }
 
-    private void setText(EditText editText, String text) {
+    private void setText(TextView editText, String text) {
         editText.setText(text);
         editText.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -53,15 +54,15 @@ public class DetailActivityActivityFragment extends Fragment {
             }
             ImageView imageView = (ImageView) root.findViewById(R.id.imageView);
             imageView.setImageBitmap(plant.mDrawable);
-            EditText text = (EditText) root.findViewById(R.id.commanNameText);
+            TextView text = (TextView) root.findViewById(R.id.commanNameText);
             setText(text, plant.mCommonName);
-            text = (EditText) root.findViewById(R.id.scientificNameText);
+            text = (TextView) root.findViewById(R.id.scientificNameText);
             setText(text, plant.mScientificName);
-            text = (EditText) root.findViewById(R.id.descriptionText);
+            text = (TextView) root.findViewById(R.id.descriptionText);
             setText(text, plant.mDesciption);
-            text = (EditText) root.findViewById(R.id.genusText);
+            text = (TextView) root.findViewById(R.id.genusText);
             setText(text, plant.mGenus);
-            text = (EditText) root.findViewById(R.id.familyText);
+            text = (TextView) root.findViewById(R.id.familyText);
             setText(text, plant.mFamily);
         }
         return root;

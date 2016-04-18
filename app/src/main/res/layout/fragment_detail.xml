@@ -30,26 +30,26 @@
             android:orientation="vertical"
             android:layout_below="@+id/imageView"
             android:layout_weight="1"
-            android:id="@+id/linearLayout">
+            android:id="@+id/linearLayout" >
 
             <TableLayout
                 android:id="@+id/tableLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                  >
+                android:padding="15dp"
+                >
                 <TableRow>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:gravity="right"
                         android:padding="3dip"
                         android:text="Common Name:"
                         android:textStyle="bold"
                         android:id="@+id/commanNameTextView"
                         />
-                    <EditText
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="New Text"
@@ -69,7 +69,7 @@
                         android:textStyle="bold"
                         android:id="@+id/scientificNameTextView"/>
 
-                    <EditText
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="3dip"
@@ -89,7 +89,7 @@
                         android:textStyle="bold"
                         android:id="@+id/genusTextView"
                         />
-                    <EditText
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="New Text"
@@ -109,7 +109,7 @@
                         android:textStyle="bold"
                         android:id="@+id/familyTextView"
                         />
-                    <EditText
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="New Text"
@@ -124,13 +124,15 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold"
-                android:padding="3dip"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="3dp"
                 android:text="Description:"
                 android:id="@+id/descriptionTextView"
                 android:layout_below="@+id/tableLayout"
                 />
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
@@ -138,7 +140,7 @@
                 android:layout_below="@+id/descriptionTextView"
                 android:layout_alignParentStart="true"
                 android:textStyle="italic"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="25dp"
                 android:text="line1 f..............New Text  ..............more ......... text......."
                 android:layout_alignEnd="@+id/linearLayout"/>
         </LinearLayout>
